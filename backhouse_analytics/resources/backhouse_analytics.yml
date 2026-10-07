@@ -25,6 +25,7 @@ resources:
         - task_key: notebook_task
           notebook_task:
             notebook_path: ../src/customer_360.ipynb
+            source: GIT
 
       environments:
         - environment_key: default
