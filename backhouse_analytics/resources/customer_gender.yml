@@ -2,8 +2,8 @@
 
 resources:
   jobs:
-    bakehouse_data_refresh:
-      name: bakehouse_data_refresh
+    Customer_gender_workflow:
+      name: Customer_gender_workflow
 
       trigger:
         # Run this job every day, exactly one day from the last run; see https://docs.databricks.com/api/workspace/jobs/create#trigger
@@ -24,7 +24,7 @@ resources:
       tasks:
         - task_key: notebook_task
           notebook_task:
-            notebook_path: ../src/customer_360.ipynb
+            notebook_path: ../src/customer_gender.ipynb
 
       environments:
         - environment_key: default

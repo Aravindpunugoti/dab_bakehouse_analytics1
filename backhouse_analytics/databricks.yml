@@ -28,6 +28,13 @@ targets:
     variables:
       catalog: bakehouse_analytics_dev
       schema: rnd
+    run_as:
+      service_principal_name: 9cb3c8f3-6c60-4c59-9107-7b12e31a5788
+    permissions:
+      - service_principal_name: 9cb3c8f3-6c60-4c59-9107-7b12e31a5788
+        level: CAN_MANAGE
+      - user_name: punugotiaravind88@gmail.com
+        level: CAN_MANAGE
   prod:
     mode: production
     workspace:
@@ -37,6 +44,10 @@ targets:
     variables:
       catalog: bakehouse_analytics_prod
       schema: rnd
+    run_as:
+        service_principal_name: 9cb3c8f3-6c60-4c59-9107-7b12e31a5788
     permissions:
+      - service_principal_name: 9cb3c8f3-6c60-4c59-9107-7b12e31a5788
+        level: CAN_MANAGE
       - user_name: punugotiaravind88@gmail.com
         level: CAN_MANAGE
